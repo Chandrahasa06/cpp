@@ -116,8 +116,11 @@ else if(choice == 'T' || choice == 't')
 {
     cout<< "select the trignometric function(sin-s/cos-c): ";
     cin>> trig;
-    cout<< "Enter the angle in degrees: ";
-    cin >> angle;
+    if(trig == 's' || trig== 'c')
+    {
+        cout<< "Enter the angle in degrees: ";
+        cin >> angle;
+    }
     rad=(3.14*angle)/180;
 }
 double x;
@@ -142,6 +145,10 @@ cout<< rad;
 else if(trig=='c')
 {
     cout<<cosine(rad)<<endl;
+}
+else
+{
+    cout<<"Invalid operator";
 }
 
 
